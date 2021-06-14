@@ -1,1 +1,1 @@
-# Solar-Irradiance-Forecasting-
+# Solar_Irradiance_Forecasting
