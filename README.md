@@ -35,9 +35,10 @@ Initial time series analysis indicated presence of seasonality in the data. Howe
 
 Time Series forecasting was performed on 24 hr, 10 days and 30 days interval. In general, the model tends to forecast better in the short term as can be seen in the result below:
 
-: ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/Training%20Prediction.png)
+![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/Training%20Prediction.png)
 
 Moreover, the forecasting used on hourly sampled data seems to capture the fine granularity of the trend very well.
+
 ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/24hr_days_forecast.png) 
 
 For long term forecast, the model doesnt perform better beyond 10 days and the performace is satisfactory upto 10 days forecasting period:
@@ -46,24 +47,20 @@ For long term forecast, the model doesnt perform better beyond 10 days and the p
 
 
 
-## Action Items
+## Actionable Items
 
-Several consistent drop in solar irradiance is observed across many stations. However, the irradiance pattern seems to be cyclical, with highest value during the summer and lowest around January – March.
+Long term seasonality of solar irradiance is obvious, however, a short-term seasonality is also observed which was useful in prediction. Based on this, an hourly forecast can be made from this model to effectively plan and manage power generation and supply. 
 
-During the 2021 power outage in Texas, which was around February 7 to February 18, Solar Irradiance was also lowest. If this pattern is cyclical, our model can predict the next occurrence of decreased solar irradiance, and thus alerting power generation company to plan ahead of the power generation and alternatives in case of disaster related to snowstorm. 
+During the 2021 power outage in Texas, which was around February 7 to February 18 during which Solar Irradiance was also lowest. This pattern is cyclical and therefore a medium-long term forecast (upto 10 days) using this model can can benefit in monitoring the solar power generation. Potential alert to other source of power generation will help to minimize any weather related power disruptions, such as snowstorm. 
 
-Apart from global irradiance highs and lows, several consistent drop in the irradiance patterns have been noticed. It is suggested to collect past historic data to make a better comparison of such significant drops.
+Apart from global irradiance highs and lows, several consistent drop in the irradiance patterns have been noticed. It is suggested to collect past historic data to get more indepth insights significant drops. Especially, if they can be predicted.
 
-The model can be used immediately to predict solar condition within windows of a day, and thus plan the electricity generation smoothly
 
 ##  Future Recommendations
 Current dataset of 1 year period was originally used to predict short-term irradiance. However, the cyclical behavior of the solar irradiance can be useful in predicting long term and therefore more historic data is needed.
 
-Current scope of work only allowed for univariate analysis, however there is a plenty of extra features that are available and are highly correlated to the solar irradiation. A multivariate method will be advantageous in creating accurate forecast.
+Current scope of work only allowed for univariate analysis, however there is a plenty of extra features that are available and are highly correlated to the solar irradiation. A multivariate method will be advantageous in creating accurate forecast especially several weather related variable such was wind speed, wind direction, cloud condition may directly affect the net radiation received.
 
-## For More Information
-
-See the full analysis in the [Jupyter Notebook](./final_model.ipynb) or review this [presentation]().
 
 
 
@@ -72,10 +69,11 @@ See the full analysis in the [Jupyter Notebook](./final_model.ipynb) or review t
 ```
 ├── data
 ├── images
-├── Apple-Twitter-Senweeted-DFE.csv
-├── Brand_Sentiment_Analysis_Final.ipynb
-├── Brand_Sentiment_Analysis_Notebook.pdf
-├── Brand_Sentiment_Analysis_ppt
+├── models
+├── Surfrad_data_collection.ipynb
+├── Modelling_Sarimax.ipynb
+├── LSTM_Modelling_All_Location.ipynb
+├── Time_Series_Forecast_of_Solar_Irradiance.ppt
 ├── Miscellaneous_files
 └── README.md
 ```
