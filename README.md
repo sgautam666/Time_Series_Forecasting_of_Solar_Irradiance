@@ -1,4 +1,4 @@
-![image](./_1080px_landscape.jpg)
+![image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/_1080px_landscape.jpg)
 
 # Time Series Forecasting of Solar Irradiance
 
