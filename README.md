@@ -51,7 +51,7 @@ For long term forecast, the model doesnt perform better beyond 10 days and the p
 
 Long term seasonality of solar irradiance is obvious, however, a short-term seasonality is also observed which was useful in prediction. Based on this, an hourly forecast can be made from this model to effectively plan and manage power generation and supply. 
 
-During the 2021 power outage in Texas, which was around February 7 to February 18 during which Solar Irradiance was also lowest. This pattern is cyclical and therefore a medium-long term forecast (upto 10 days) using this model can can benefit in monitoring the solar power generation. Potential alert to other source of power generation will help to minimize any weather related power disruptions, such as snowstorm. 
+During the 2021 power outage in Texas, which was around February 7 to February 18 during which Solar Irradiance was also lowest. This pattern is cyclical and therefore a medium-long term forecast (upto 10 days) can benefit in monitoring the solar power generation. Potential alert to other source of power generation will help to minimize any weather related power disruptions, such as snowstorm. 
 
 Apart from global irradiance highs and lows, several consistent drop in the irradiance patterns have been noticed. It is suggested to collect past historic data to get more indepth insights significant drops. Especially, if they can be predicted.
 
