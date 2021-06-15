@@ -20,20 +20,22 @@ This project is aimed to generate a predictive modelling algorithm that can fore
 
 ## Data
 
-The for this project was acquired from Daily [NOAA](https://gml.noaa.gov/aftp/data/radiation/surfrad/) that hosts Surface Radiation data from 7 station around the United States [image]( location map). The data are avilalble in the interval of ~17s of daily records. Although, there is yearly data going back few years, the primary focus of this focus is to predict on the short-term basis. Therefore, only data from year 2020-2021 was used for this project. The 2020 data was used as training data whereas the 2021 data was used for validation and test, since the 2021 data as of current is incomplete. 
+The for this project was acquired from Daily [NOAA](https://gml.noaa.gov/aftp/data/radiation/surfrad/) that hosts Surface Radiation data from 7 station around the United States [image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/location_map.png). The data are avilalble in the interval of ~17s of daily records. Although, there is yearly data going back few years, the primary focus of this focus is to predict on the short-term basis. Therefore, only data from year 2020-2021 was used for this project. The 2020 data was used as training data whereas the 2021 data was used for validation and test, since the 2021 data as of current is incomplete. 
 
 ## Data Exploration
 
-The size of data is huge as it records data at ~17s interval. Because we are interested in forecasting in hours and/or day to day basis, the data will be downsampled to hours only. The full data exploration notebook can be found in [Data Exploration](./Surfrad_data_collection.ipynb).
+The size of data is huge as it records data at ~17s interval. Because we are interested in forecasting in hours and/or day to day basis, the data will be downsampled to hours only. The full data exploration notebook can be found in [Data Exploration](./Surfrad_data_collection.ipynb). Though, there are multitude of features available for this dataset, for this project only one feature that is associated with solar energy is used. In this case, 'Netsolar' radiation will be our time series upon which all the forecasting methods will be tested.
 
 ## Modelling 
-In this project, two different kinds of modelling apprach were performed: 
+In this project, two different kinds of modelling approach were experimented: 
 1. classical time series method such as ARIMA and SARIMAX:[Modelling_I](./Modelling_Sarimax.ipynb).
 2. Neural Network Architecture such as LSTM : [Modelling_II](./LSTM_Modelling_All_Location.ipynb).
 
+Initial time series analysis indicated presence of seasonality in the data. However, SARIMAX method which accounts for seasonality doesn't seems to forecast as expected. This could be related to the lack of more historic data. On the otherhad, LSTM network seems to perform much better on this datata [Training Prediction](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/Training%20Prediction.png).
+
 ## Results
 
-Time Series forecasting was performed on 24 hr, 10 days and 30 days interval. Forecasting accuracy is higher on the short-term lags. Current model doesn’t produce good forecast beyond 10 days lag. 
+Time Series forecasting was performed on 24 hr, 10 days and 30 days interval. In general, the model tends to forecast better in the short term as can be seen in the result [24hr forecast](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/24hr_days_forecast.png). For long term forecast, the model doesnt perform better beyond 10 days and the performace is satisfactory upto 10 days forecasting period [10 days forecast](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/10_days_forecast.png)
 
 Several consistent drop in solar irradiance is observed across many stations. However, the irradiance pattern seems to be cyclical, with highest value during the summer and lowest around January – March.
 
