@@ -28,8 +28,8 @@ The size of data is huge as it records data at ~17s interval. Because we are int
 
 ## Modelling 
 In this project, two different kinds of modelling apprach were performed: 
-1. classical time series method such as ARIMA and SARIMAX:[Data Exploration](./Surfrad_data_collection.ipynb).
-2. Neural Network Architecture such as LSTM : [Data Exploration](./Surfrad_data_collection.ipynb).
+1. classical time series method such as ARIMA and SARIMAX:[Modelling_I](./Modelling_Sarimax.ipynb).
+2. Neural Network Architecture such as LSTM : [Modelling_II](./LSTM_Modelling_All_Location.ipynb).
 
 ## Results
 
