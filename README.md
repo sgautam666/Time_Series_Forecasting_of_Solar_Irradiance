@@ -32,13 +32,15 @@ In this project, two different kinds of modelling approach were experimented:
 1. classical time series method such as ARIMA and SARIMAX:[Modelling_I](./Modelling_Sarimax.ipynb).
 2. Neural Network Architecture such as LSTM : [Modelling_II](./LSTM_Modelling_All_Location.ipynb).
 
-Initial time series analysis indicated presence of seasonality in the data. However, SARIMAX method which accounts for seasonality doesn't seems to forecast as expected. This could be related to the lack of more historic data. On the otherhad, LSTM network seems to perform much better on this datata ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/Training%20Prediction.png).
+Initial time series analysis indicated presence of seasonality in the data. However, SARIMAX method which accounts for seasonality doesn't seems to forecast as expected. This could be related to the lack of more historic data. On the otherhad, LSTM network seems to perform much better on this datata: ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/Training%20Prediction.png)
 
 ## Results
 
-Time Series forecasting was performed on 24 hr, 10 days and 30 days interval. In general, the model tends to forecast better in the short term as can be seen in the result ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/24hr_days_forecast.png). 
+Time Series forecasting was performed on 24 hr, 10 days and 30 days interval. In general, the model tends to forecast better in the short term as can be seen in the result below: 
+![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/24hr_days_forecast.png) 
 
-For long term forecast, the model doesnt perform better beyond 10 days and the performace is satisfactory upto 10 days forecasting period ![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/10_days_forecast.png)
+For long term forecast, the model doesnt perform better beyond 10 days and the performace is satisfactory upto 10 days forecasting period
+![Image](https://github.com/sgautam666/Time_Series_Forecasting_of_Solar_Irradiance/blob/main/images/10_days_forecast.png)
 
 Several consistent drop in solar irradiance is observed across many stations. However, the irradiance pattern seems to be cyclical, with highest value during the summer and lowest around January – March.
 
